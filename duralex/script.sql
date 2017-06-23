@@ -46,23 +46,78 @@ CREATE TABLE `usuario` (
 --
 
 --
--- Indices de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`);
+/*
+SQLyog Ultimate v11.11 (32 bit)
+MySQL - 5.5.5-10.1.21-MariaDB : Database - abogados
+*********************************************************************
+*/
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
 
---
--- AUTO_INCREMENT de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
- 
- /* prueba git hans
- /* prueba 2 git hans
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`abogados` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `abogados`;
+
+/*Table structure for table `abogado` */
+
+DROP TABLE IF EXISTS `abogado`;
+
+CREATE TABLE `abogado` (
+  `id_abogado` int(11) NOT NULL AUTO_INCREMENT,
+  `rut` varchar(25) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `apellido` varchar(255) NOT NULL,
+  `fecha_contratacion` date NOT NULL,
+  `especialidad` enum('Civil','Familia','Penalista','') NOT NULL,
+  `valor_hora` int(11) NOT NULL,
+  PRIMARY KEY (`id_abogado`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `abogado` */
+
+/*Table structure for table `atencion` */
+
+DROP TABLE IF EXISTS `atencion`;
+
+CREATE TABLE `atencion` (
+  `id_atencion` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha_hora` datetime NOT NULL,
+  `id_cliente` int(11) NOT NULL,
+  `id_abogado` int(11) NOT NULL,
+  `estado` enum('Agendada','Confirmada','Anulada','Perdida','Realizada') NOT NULL,
+  PRIMARY KEY (`id_atencion`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `atencion` */
+
+/*Table structure for table `usuario` */
+
+DROP TABLE IF EXISTS `usuario`;
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rut` varchar(55) NOT NULL,
+  `nombre` varchar(55) NOT NULL,
+  `apellido` varchar(55) NOT NULL,
+  `direccion` varchar(255) NOT NULL,
+  `telefonos` varchar(255) NOT NULL,
+  `fecha_creacion` date NOT NULL,
+  `tipo_persona` enum('NATURAL','JURIDICA') NOT NULL,
+  `rol` enum('CLIENTE','GERENTE','ADMINISTRADOR','SECRETARIA') NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `usuario` */
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
