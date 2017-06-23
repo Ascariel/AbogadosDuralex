@@ -48,7 +48,7 @@
 		<tr>
 			<td>Rol</td>
 			<td>
-				<select>
+				<select name="rol">
 					<option value="CLIENTE">CLIENTE</option>
 					<option value="SECRETARIA">SECRETARIA</option>
 					<option value="ADMINISTRADOR">ADMINISTRADOR</option>
