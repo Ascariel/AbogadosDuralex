@@ -65,3 +65,4 @@ ALTER TABLE `usuario`
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
  
  /* prueba git hans
+ /* prueba 2 git hans
