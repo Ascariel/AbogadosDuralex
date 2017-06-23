@@ -53,4 +53,7 @@ $route['default_controller']   = 'cPersona';
 $route['404_override']         = '';
 $route['translate_uri_dashes'] = false;
 
- cPrueba/index    -> cPrueba/index
+
+$route['test/asd'] = 'cPrueba/index';
+
+
