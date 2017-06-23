@@ -17,44 +17,49 @@
 
 		<tr>
 			<td><label>Nombre</label></td>
-			<td><input type="text" name="txtNombre"></td>
+			<td><input type="text" name="nombre"></td>
 		</tr>
 
 		<tr>
-			<td><label>Ap Paterno</label></td>
-			<td><input type="text" name="txtPaterno"></td>
+			<td><label>Apellido</label></td>
+			<td><input type="text" name="apellido"></td>
 		</tr>
 
 		<tr>
-			<td><label>Ap Materno</label></td>
-			<td><input type="text" name="txtMaterno"></td>
+			<td><label>Direccion</label></td>
+			<td><input type="text" name="direccion"></td>
 		</tr>
 
 		<tr>
-			<td><label>Email</label></td>
-			<td><input type="email" name="txtEmail"></td>
+			<td><label>telefonos</label></td>
+			<td><input type="text" name="telefonos"></td>
 		</tr>
 
 		<tr>
-			<td><label>fecha Nac</label></td>
-			<td><input type="date" name="datFecha"></td>
+			<td>Tipo Persona</td>
+			<td>
+				<select name="tipo_persona">
+					<option value="NATURAL">NATURAL</option>
+					<option value="JURIDICA">JURIDICA</option>
+				</select>				
+			</td>
 		</tr>
 
 		<tr>
-			<td><label>Usuario</label></td>
-
-		</tr>
-
-
-		<tr>
-			<td><label>Usuario</label></td>
-			<td><input type="text" name="txtUsuario"></td>
-		</tr>
-
+			<td>Rol</td>
+			<td>
+				<select>
+					<option value="CLIENTE">CLIENTE</option>
+					<option value="SECRETARIA">SECRETARIA</option>
+					<option value="ADMINISTRADOR">ADMINISTRADOR</option>
+					<option value="GERENTE	">GERENTE</option>
+				</select>				
+			</td>
+		</tr>		
 
 		<tr>
 			<td><label>Password</label></td>
-			<td><input type="password" name="txtcontra"></td>
+			<td><input type="password" name="password"></td>
 		</tr>
 
 		<tr>
