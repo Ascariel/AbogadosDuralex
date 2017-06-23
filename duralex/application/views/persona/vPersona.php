@@ -12,7 +12,7 @@
 
 		<tr>
 			<td><label>Run</label></td>
-			<td><input type="text" name="txtRun"></td>
+			<td><input type="text" name="rut"></td>
 		</tr>
 
 		<tr>
