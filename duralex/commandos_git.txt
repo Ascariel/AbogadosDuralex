@@ -1,0 +1,12 @@
+Primero bajar Repositorio
+	git clone url_copiada_desde_el_boton_clone_de_github
+Checkear cambios
+	git status
+Monitorear todos los cambios
+	git add .
+Guardar cambios
+	git commit -am "tu mensaje"
+Bajar cambios (antes de subir algo)
+	git pull origin master	
+Subir cambios commiteados
+	git push origin master
