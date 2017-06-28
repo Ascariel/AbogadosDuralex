@@ -2,6 +2,22 @@
 What is CodeIgniter
 ###################
 
+Find PID of process that use a port on Windows (e.g. port:"9999")
+netstat -aon | find "9999"
+
+-a Displays all connections and listening ports.
+
+-o Displays the owning process ID associated with each connection.
+
+-n Displays addresses and port numbers in numerical form.
+
+output:
+TCP    0.0.0.0:9999       0.0.0.0:0       LISTENING       15776
+
+Then Kill the process by PID taskkill /F /PID 15776
+
+/F - Specifies to forcefully terminate the process(es).
+
 CodeIgniter is an Application Development Framework - a toolkit - for people
 who build web sites using PHP. Its goal is to enable you to develop projects
 much faster than you could if you were writing code from scratch, by providing
